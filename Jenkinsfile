@@ -10,9 +10,9 @@ pipeline {
           sh "pwd"
 
           withCredentials([sshUserPrivateKey(credentialsId: 'ssh-credential-one', keyFileVariable: 'SSH_KEY')]) {
-            sh ''' 
-              ssh -i $SSH_KEY 13044-605@gate.yetiapp.cloud -p 3022 "echo hello"
-            '''
+              sh '''
+                  ssh -i $SSH_KEY 13044-605@gate.yetiapp.cloud -p 3022 "echo hello"
+              '''
           }
         }
         sh "pwd"
