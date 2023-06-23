@@ -10,7 +10,7 @@ pipeline {
           sh "pwd"
 
           withCredentials([sshUserPrivateKey(credentialsId: 'ssh-credential-one', keyFileVariable: 'SSH_KEY')]) {
-            sh '''scp -i $SSH_KEY /var/jenkins_home/workspace/ssh-test-two/index.js -P 3022 13044-605@gate.yetiapp.cloud:/root/app'''
+            sh '''scp -i $SSH_KEY /var/jenkins_home/workspace/ssh-test-two/index.js -P 3022 13044-605@gate.yetiapp.cloud:/root/app/'''
           }
         }
         sh "pwd"
