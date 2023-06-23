@@ -4,7 +4,9 @@ pipeline {
     stage('test') {
       steps {
         echo 'hello'
-        sh node -v
+        node('node-18.16.1') {
+          sh node -v
+        }
       }
     }
   }
