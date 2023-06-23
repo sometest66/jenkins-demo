@@ -16,7 +16,6 @@ pipeline {
              sh '''
                   ssh -i $SSH_KEY 13044-605@gate.yetiapp.cloud -p 3022 "echo hello"
               '''
-            /var/jenkins_home/workspace/ssh-test-two
           }
         }
         sh "pwd"
